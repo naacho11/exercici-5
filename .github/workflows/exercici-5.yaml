@@ -1,6 +1,7 @@
 name: Exercici-5
   on:
-    push: [ test ]
+    push:
+    branches: [ test ]
 
 jobs:
   compile-test-linux:
