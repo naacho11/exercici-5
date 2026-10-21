@@ -1,11 +1,12 @@
 name: Exercici-5
-  on:
-    push:
+on:
+  push:
     branches: [ test ]
 
 jobs:
   compile-test-linux:
     runs-on: ubuntu-latest
+    steps:
     name: Checkout del repo
     uses: actions/checkout@v4
 
@@ -13,5 +14,16 @@ jobs:
     run: Makefile
     name: binari
     run: ./conversor.c
+
+  compile-test-macos:
+    runs-on: macos-latest
+    steps:
+      name: Checkout del repo
+      uses: actions/checkout@v4
+
+      name: Compilar
+      run: Makefile
+      name: binari
+      run: ./conversor.c
 
 
