@@ -1,0 +1,16 @@
+name: Exercici-5
+  on:
+    push: [ test ]
+
+jobs:
+  compile-test-linux:
+    runs-on: ubuntu-latest
+    name: Checkout del repo
+    uses: actions/checkout@v4
+
+    name: Compilar
+    run: Makefile
+    name: binari
+    run: ./conversor.c
+
+
