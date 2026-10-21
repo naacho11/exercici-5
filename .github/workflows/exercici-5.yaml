@@ -6,24 +6,24 @@ on:
 jobs:
   compile-test-linux:
     runs-on: ubuntu-latest
-    steps:
-    name: Checkout del repo
-    uses: actions/checkout@v4
+   - steps:
+   - name: Checkout del repo
+   - uses: actions/checkout@v4
 
-    name: Compilar
-    run: Makefile
-    name: binari
-    run: ./conversor.c
+   - name: Compilar
+   - run: Makefile
+   - name: binari
+   - run: ./conversor.c
 
   compile-test-macos:
     runs-on: macos-latest
     steps:
-      name: Checkout del repo
-      uses: actions/checkout@v4
+     - name: Checkout del repo
+     - uses: actions/checkout@v4
 
-      name: Compilar
-      run: Makefile
-      name: binari
-      run: ./conversor.c
+     - name: Compilar
+     - run: Makefile
+     - name: binari
+     - run: ./conversor.c
 
 
